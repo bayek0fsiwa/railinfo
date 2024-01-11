@@ -1,5 +1,9 @@
 name: actions
+<<<<<<< HEAD
 on: [push, workflow_dispatch]
+=======
+on: push
+>>>>>>> 3587e6b00286fd2a6ca50ba616ee18fd148499c4
 jobs:
 
   lint:
@@ -23,7 +27,10 @@ jobs:
         run: npm run test --if-present
 
   build:
+<<<<<<< HEAD
     needs: test
+=======
+>>>>>>> 3587e6b00286fd2a6ca50ba616ee18fd148499c4
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -34,7 +41,10 @@ jobs:
         run: npm run build --if-present
 
   deploy:
+<<<<<<< HEAD
     needs: build
+=======
+>>>>>>> 3587e6b00286fd2a6ca50ba616ee18fd148499c4
     runs-on: ubuntu-latest
     steps:
       - name: Get code
