@@ -5,7 +5,7 @@
   "main": "server.ts",
   "scripts": {
     "dev": "nodemon server.ts",
-    "start": "node server.ts"
+    "start": "npx ts-node server.ts"
   },
   "keywords": [],
   "author": "",
