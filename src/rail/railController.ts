@@ -6,7 +6,7 @@ export async function getStations(req: Request, res: Response) {
         const stationsUrl = config.stationsUrl;
         const response = await fetch(stationsUrl as string, {
             method: "GET",
-            headers: { "accept": "application/json" },
+            // headers: { "accept": "application/json" },
         });
         const result = await response.json();
         return res.status(200).json({ data: result });
@@ -20,7 +20,7 @@ export async function getTrains(req: Request, res: Response) {
         const trainsUrl = config.trainsUrl;
         const response = await fetch(trainsUrl as string, {
             method: "GET",
-            headers: { "accept": "application/json" },
+            // headers: { "accept": "application/json" },
         });
         const result = await response.json();
         return res.status(200).json({ data: result });
@@ -35,7 +35,7 @@ export async function getPnr(req: Request, res: Response) {
         const pnrUrl = config.pnrUrl;
         const response = await fetch(`${pnrUrl}/${pnrNumber}` as string, {
             method: "GET",
-            headers: { "accept": "application/json" },
+            // headers: { "accept": "application/json" },
         });
         const result = await response.json();
         return res.status(200).json({ data: result });
